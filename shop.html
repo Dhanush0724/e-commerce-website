@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid Template</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background-color: #CDF5FD;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 50px; /* Adjust the gap as needed */
+            margin-top: 150px;
+            margin-left: 145px;
+        }
+        .grid-item {
+            border: 2px solid #0e0d0d;
+            padding: 20px;
+            text-align: center;
+            height: 290px;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            background-color: #A0E9FF;
+            
+        }
+        .head {
+            display: flex;
+            border: 1px solid black;
+            padding: 5px;
+            justify-content: center;
+            margin-bottom: 5px;
+            background-color: #176B87;
+            color: orange;
+           
+            
+        }
+        .img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .addtocart {
+            display: flex;
+            align-items: center;
+        }
+        #item-count{
+            
+            width: 25px;
+        }
+        #add{
+            margin-left: 25px;
+        }
+        #view{
+            margin-left: 15px;
+        }
+        .addtocart{
+            margin-top: 15px;
+        }
+        .heading{
+            border: 2px solid black;
+            width: 150px;
+            border-radius: 40%;
+            background-color:#176B87;
+            margin-bottom: 12px;
+        }
+        #mvn{
+            display: flex;
+            justify-content: center;
+            color: greenyellow;
+            font-size: large;
+            margin-top: 15px;
+        }
+        .thecart{
+           display: flex;
+           justify-content: flex-end;
+           margin-left: 100px;
+           color: #279EFF;
+        }
+        .mvn{
+            font-size: 90px;
+           
+        }
+        #add,#view{
+            background-color:#DAFFFB ;
+        }
+        
+    </style>
+</head>
+<body>
+<div class="head">
+    <marquee width = "65%" id="mvn" class="mvn" >WELCOME TO PRODUCT GALLERY SHOP GET 10%  off ON FIRST ORDER!</marquee>
+    <div class="thecart">
+        <h2 class="thecart"> <button style="font-size:24px" color = "#279EFF">CART <i class="fa fa-shopping-cart"></i></button></h2>
+    </div>
+</div>
+
+<div class="grid-container">
+    <div class="grid-item">
+        <div class="img"><div class="heading">GREEN GRASS</div>
+            <img src="./img1.jpg" alt="" width="250px" height="230px">
+        </div>
+        <div class="addtocart">
+            <button type="button" onclick="decrement()">-</button>
+            <input type="text" id="item-count" value="1" readonly maxlength="2">
+
+            <button type="button" onclick="increment()">+</button>
+            <button type="button" id="add">Add to Cart</button>
+            <button type="button" id="view">View</button>
+        </div>
+    </div>
+    <div class="grid-item">
+        <!-- Add content for Item 2 here -->
+        <div class="img"><div class="heading">YELLOW FISH</div>
+            <img src="./samplephotos/adam-melrose-_1FbuCzlMqo-unsplash.jpg" alt="" width="250px" height="230px">
+        </div>
+        <div class="addtocart">
+            <button type="button" onclick="decrement()">-</button>
+            <input type="text" id="item-count" value="1" readonly maxlength="2">
+
+            <button type="button" onclick="increment()">+</button>
+            <button type="button" id="add">Add to Cart</button>
+            <button type="button" id="view">View</button>
+        </div>
+    </div>
+    <div class="grid-item">
+        <!-- Add content for Item 3 here -->
+        <div class="img"><div class="heading">JATI FISH</div>
+            <img src="./samplephotos/blend-hell-GNQUsuajHFQ-unsplash.jpg" alt="" width="250px" height="230px">
+        </div>
+        <div class="addtocart">
+            <button type="button" onclick="decrement()">-</button>
+            <input type="text" id="item-count" value="1" readonly maxlength="2">
+
+            <button type="button" onclick="increment()">+</button>
+            <button type="button" id="add">Add to Cart</button>
+            <button type="button" id="view">View</button>
+        </div>
+
+    </div>
+    <div class="grid-item">
+        <!-- Add content for Item 4 here -->
+        <div class="img"><div class="heading">DOG BREED</div>
+            <img src="./samplephotos/craig-lovelidge-5iiI5wVXY8M-unsplash.jpg" alt="" width="250px" height="230px">
+        </div>
+        <div class="addtocart">
+            <button type="button" onclick="decrement()">-</button>
+            <input type="text" id="item-count" value="1" readonly maxlength="2">
+
+            <button type="button" onclick="increment()">+</button>
+            <button type="button" id="add">Add to Cart</button>
+            <button type="button" id="view">View</button>
+        </div>
+    </div>
+    <div class="grid-item">
+        <!-- Add content for Item 5 here -->
+        <div class="img"><div class="heading">RED PALTI</div>
+            <img src="./samplephotos/dear-BqtZrxHS6IQ-unsplash.jpg" alt="" width="250px" height="230px">
+        </div>
+        <div class="addtocart">
+            <button type="button" onclick="decrement()">-</button>
+            <input type="text" id="item-count" value="1" readonly maxlength="2">
+
+            <button type="button" onclick="increment()">+</button>
+            <button type="button" id="add">Add to Cart</button>
+            <button type="button" id="view">View</button>
+        </div>
+    </div>
+    <div class="grid-item">
+        <!-- Add content for Item 6 here -->
+        <div class="img"><div class="heading">WASTE FREE</div>
+            <img src="./samplephotos/foad-memariaan-OPtPK3kMWEc-unsplash.jpg" alt="" width="250px" height="230px">
+        </div>
+        <div class="addtocart">
+            <button type="button" onclick="decrement()">-</button>
+            <input type="text" id="item-count" value="1" readonly maxlength="2">
+            <button type="button" onclick="increment()">+</button>
+            <button type="button" id="add">Add to Cart</button>
+            <button type="button" id="view">View</button>
+        </div>
+    </div>
+    <div class="grid-item">
+        <!-- Add content for Item 7 here -->
+        <div class="img"><div class="heading">MAS EATER</div>
+            <img src="./samplephotos/huy-phan-nJrSZM_OaJg-unsplash.jpg" alt="" width="250px" height="230px">
+        </div>
+        <div class="addtocart">
+            <button type="button" onclick="decrement()">-</button>
+            <input type="text" id="item-count" value="1" readonly maxlength="2">
+
+            <button type="button" onclick="increment()">+</button>
+            <button type="button" id="add">Add to Cart</button>
+            <button type="button" id="view">View</button>
+        </div>
+    </div>
+    <div class="grid-item">
+        <!-- Add content for Item 8 here -->
+        <div class="img"><div class="heading">RAINDOM USA</div>
+            <img src="./samplephotos/worachat-sodsri-0X_kRW8Cj0k-unsplash.jpg" alt="" width="250px" height="230px">
+        </div>
+        <div class="addtocart">
+            <button type="button" onclick="decrement()">-</button>
+            <input type="text" id="item-count" value="1" readonly maxlength="2">
+
+            <button type="button" onclick="increment()">+</button>
+            <button type="button" id="add">Add to Cart</button>
+            <button type="button" id="view">View</button>
+        </div>
+    </div>
+</div>
+<script src="shop.js"></script>
+</body>
+</html>
